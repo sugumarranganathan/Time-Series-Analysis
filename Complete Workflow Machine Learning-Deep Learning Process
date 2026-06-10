@@ -1,0 +1,35 @@
+Two Phases of Artificial Intelligence
+
+Artificial Intelligence
+│
+├── Model Creation (Training Phase)
+│
+└── Deployment (Real World Usage)
+
+=========
+
+Complete Workflow
+
+Data Collection
+        ↓
+Data Preprocessing
+        ↓
+Input / Output Split
+        ↓
+Train-Test Split
+        ↓
+Train Set
+        ↓
+Model Creation
+        ↓
+Test Set
+        ↓
+Evaluation Metrics
+        ↓
+Save Model
+        ↓
+Deployment
+        ↓
+Real User Uses Model
+
+=======
