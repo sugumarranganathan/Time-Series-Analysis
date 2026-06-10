@@ -1,0 +1,153 @@
+What is a Candlestick?
+
+A candlestick represents the price movement of a stock during a specific time period (1 minute, 1 hour, 1 day, etc.).
+
+Each candle shows 4 important values:
+
+| Term  | Meaning                |
+| ----- | ---------------------- |
+| Open  | Price at the beginning |
+| High  | Highest price reached  |
+| Low   | Lowest price reached   |
+| Close | Price at the end       |
+
+========
+
+      High
+       │
+       │
+    ┌─────┐
+    │     │ ← Close
+    │     │
+    └─────┘
+       │
+       │
+      Low
+
+Open (Bottom)
+Close (Top)
+
+==========
+
+Meaning
+Close Price > Open Price
+
+| Value | Price |
+| ----- | ----- |
+| Open  | ₹100  |
+| High  | ₹120  |
+| Low   | ₹95   |
+| Close | ₹115  |
+
+
+
+115 > 100
+
+the candle is Green (Bullish).
+
+==========
+
+Red Candlestick 📉 (Price Decreased)
+
+      High
+       │
+       │
+    ┌─────┐
+    │     │ ← Open
+    │     │
+    └─────┘
+       │
+       │
+      Low
+
+Close (Bottom)
+
+Meaning
+Close Price < Open Price
+
+| Value | Price |
+| ----- | ----- |
+| Open  | ₹120  |
+| High  | ₹130  |
+| Low   | ₹100  |
+| Close | ₹105  |
+
+
+Since:
+
+105 < 120
+
+the candle is Red (Bearish).
+
+=========
+
+Understanding the Parts
+
+       High
+         │
+         │
+    ┌────────┐
+    │ Body   │
+    └────────┘
+         │
+         │
+        Low
+
+| Part       | Meaning                           |
+| ---------- | --------------------------------- |
+| Upper Wick | Distance from High price          |
+| Body       | Difference between Open and Close |
+| Lower Wick | Distance to Low price             |
+
+
+=====
+Why Use Candlesticks in Time Series Analysis?
+
+Time Series Analysis studies data over time.
+
+For stock markets:
+
+Day 1 → Candlestick
+Day 2 → Candlestick
+Day 3 → Candlestick
+Day 4 → Candlestick
+...
+
+By analyzing many candlesticks, traders try to predict future price movements.
+
+=========
+
+Example
+
+Monday    🟢
+Tuesday   🟢
+Wednesday 🟢
+Thursday  🔴
+Friday    🟢
+
+This sequence helps identify:
+
+Upward trend 📈
+Downward trend 📉
+Market behavior
+
+======
+
+Simple Workflow
+
+Stock Prices
+      ↓
+Open, High, Low, Close
+      ↓
+Candlestick Chart
+      ↓
+Time Series Analysis
+      ↓
+Future Price Prediction
+
+=======
+
+A candlestick chart is a time-series visualization used in stock markets that shows 
+the Open, High, Low, and Close prices of a stock for a specific time period.
+
+======
