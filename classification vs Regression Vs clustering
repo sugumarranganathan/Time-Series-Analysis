@@ -1,0 +1,31 @@
+| Technique          | Input Data (Features)          | Output Example               | Data Type of Output | Example Model                                       | Result                       |
+| ------------------ | ------------------------------ | ---------------------------- | ------------------- | --------------------------------------------------- | ---------------------------- |
+| **Classification** | Image of waste item            | Plastic, Paper, Glass, Metal | Category / Label    | VGG16, ResNet18, Random Forest, SVM                 | Predicts a class/category    |
+| **Regression**     | House size, bedrooms, location | ₹50,00,000                   | Continuous Number   | Linear Regression, Random Forest Regressor, XGBoost | Predicts a numerical value   |
+| **Clustering**     | Customer age, income, spending | Group 1, Group 2, Group 3    | Cluster/Group       | K-Means, DBSCAN, Hierarchical Clustering            | Groups similar data together |
+
+=============
+
+Machine Learning / Deep Learning
+│
+├── Supervised Learning
+│     ├── Classification
+│     └── Regression
+│
+└── Unsupervised Learning
+      └── Clustering
+
+=======
+
+Relationship Table
+
+| Learning Type | Technique      | Labels Available? | Example                |
+| ------------- | -------------- | ----------------- | ---------------------- |
+| Supervised    | Classification | Yes               | Dog vs Cat             |
+| Supervised    | Regression     | Yes               | House Price Prediction |
+| Unsupervised  | Clustering     | No                | Customer Segmentation  |
+
+=======
+
+
+
