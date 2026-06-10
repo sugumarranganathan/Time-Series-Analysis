@@ -1,0 +1,279 @@
+Trading Logic
+
+| Price Reaches | Expected Action |
+| ------------- | --------------- |
+| Support       | Buy             |
+| Resistance    | Sell            |
+
+============
+
+| Trader Type        | Best Time Frame       |
+| ------------------ | --------------------- |
+| Scalper            | 1 Min, 5 Min          |
+| Intraday Trader    | 5 Min, 15 Min         |
+| Swing Trader       | 1 Hour, 4 Hour, 1 Day |
+| Long-Term Investor | 1 Week, 1 Month       |
+
+=========
+
+
+
+1. Support – What is it?
+
+Support is a price level where a stock usually stops falling because many buyers start buying.
+
+Real-Life Example
+
+Suppose a stock price moves like this:
+
+₹120
+  ↓
+₹110
+  ↓
+₹100 ← Buyers enter
+  ↑
+₹105
+  ↑
+₹110
+
+Here:
+
+₹100 = Support Level
+
+Why?
+
+Because whenever the stock reaches ₹100, many people think:
+
+"This stock is cheap. Let's buy."
+
+So demand increases and the price goes up.
+
+2. Resistance – What is it?
+
+Resistance is a price level where a stock usually stops rising because many sellers start selling.
+
+Real-Life Example
+₹100
+  ↑
+₹110
+  ↑
+₹120 ← Sellers enter
+  ↓
+₹115
+  ↓
+₹110
+
+Here:
+
+₹120 = Resistance Level
+
+Why?
+
+Because many traders think:
+
+"The price is high. Let's sell and book profit."
+
+So supply increases and the price falls.
+
+Support and Resistance Together
+
+
+Resistance = ₹120
+────────────────
+
+     Price moves
+
+────────────────
+Support = ₹100
+
+========
+
+Trading Logic
+
+| Price Reaches | Expected Action |
+| ------------- | --------------- |
+| Support       | Buy             |
+| Resistance    | Sell            |
+
+=======
+
+
+Real Market Example
+
+Suppose:
+
+Reliance Share
+
+moves like this for several days:
+| Day       | Price |
+| --------- | ----- |
+| Monday    | ₹1480 |
+| Tuesday   | ₹1500 |
+| Wednesday | ₹1490 |
+| Thursday  | ₹1500 |
+| Friday    | ₹1485 |
+
+
+You notice:
+
+₹1500
+
+is difficult to cross.
+
+Therefore:
+
+₹1500 = Resistance
+
+Similarly:
+
+| Day       | Price |
+| --------- | ----- |
+| Monday    | ₹1400 |
+| Tuesday   | ₹1405 |
+| Wednesday | ₹1400 |
+| Thursday  | ₹1402 |
+| Friday    | ₹1400 |
+
+Then:
+
+₹1400 = Support
+
+What are Time Frames?
+
+A time frame tells how much time one candle represents.
+
+1 Minute Chart
+One candle = 1 minute
+
+Example:
+
+9:15 AM → Candle 1
+9:16 AM → Candle 2
+9:17 AM → Candle 3
+
+Used by:
+
+Scalpers
+Very short-term traders
+
+========
+
+5 Minute Chart
+One candle = 5 minutes
+
+Example:
+
+9:15–9:20 = One candle
+9:20–9:25 = One candle
+
+Used by:
+
+Intraday traders
+15 Minute Chart
+One candle = 15 minutes
+
+Example:
+
+9:15–9:30 = One candle
+9:30–9:45 = One candle
+
+Used by:
+
+Intraday traders
+Beginners
+1 Hour Chart
+One candle = 1 hour
+
+Example:
+
+9:15–10:15 = One candle
+10:15–11:15 = One candle
+
+Used by:
+
+Swing traders
+1 Day Chart
+One candle = 1 trading day
+
+Example:
+
+Monday = One candle
+Tuesday = One candle
+Wednesday = One candle
+
+Used by:
+
+Investors
+Swing traders
+1 Week Chart
+One candle = 1 week
+
+Example:
+
+Week 1 = One candle
+Week 2 = One candle
+
+Used by:
+
+Long-term investors
+1 Month Chart
+One candle = 1 month
+
+Example:
+
+January = One candle
+February = One candle
+March = One candle
+
+Used by:
+
+Long-term investors
+Portfolio managers
+
+Which Time Frame Should You Use?
+
+| Day       | Price |
+| --------- | ----- |
+| Monday    | ₹1400 |
+| Tuesday   | ₹1405 |
+| Wednesday | ₹1400 |
+| Thursday  | ₹1402 |
+| Friday    | ₹1400 |
+
+
+======
+
+Complete Example
+
+Suppose:
+
+TCS Share
+
+Support = ₹3500
+Resistance = ₹3700
+
+======
+
+
+Intraday Trader (15 Min Chart)
+Price falls to ₹3500
+      ↓
+Buy
+
+Price rises to ₹3700
+      ↓
+Sell
+
+=====
+
+
+Investor (1 Month Chart)
+Buy near ₹3500
+Hold for several months
+Sell above ₹3700 or higher
+=======
+
+Support is the price level where buyers stop the stock from falling further, 
+while resistance is the price level where sellers stop the stock from rising further. 
+Time frames represent the duration of each candlestick, such as 1 minute, 15 minutes, 1 day, 
+or 1 month, and are used by different types of traders to analyze market trends.
