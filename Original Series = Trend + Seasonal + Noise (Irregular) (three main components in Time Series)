@@ -1,0 +1,88 @@
+Components in Time Series
+Definition
+
+A Time Series is data collected over time. It is generally made up of three main components:
+
+Original Series = Trend + Seasonal + Noise (Irregular)
+
+| Component                      | Description                                    | Example                                                |
+| ------------------------------ | ---------------------------------------------- | ------------------------------------------------------ |
+| **Trend**                      | Long-term upward or downward movement in data. | Sales increasing every year.                           |
+| **Seasonal**                   | Repeating pattern at fixed intervals.          | Higher ice cream sales every summer.                   |
+| **Noise (Irregular/Cyclical)** | Random fluctuations that cannot be predicted.  | Sudden sales drop due to a strike or unexpected event. |
+| **Original Series**            | Combination of all components.                 | Actual observed sales data.                            |
+
+===========
+
+1) Original Series
+The actual data collected over time.
+Contains trend, seasonal patterns, and noise together.
+
+Formula:
+
+Original Series = Trend + Seasonal + Noise
+
+2) Seasonal Component
+
+Description:
+A pattern that repeats at regular intervals.
+
+Examples:
+
+Increased umbrella sales during rainy seasons.
+Increased shopping during festivals.
+Higher electricity usage during summer.
+
+Characteristics:
+
+Repeats after a fixed period.
+Predictable pattern.
+3) Trend Component
+
+Description:
+The long-term direction of the data.
+
+Examples:
+
+Company revenue growing year by year.
+Population increasing over decades.
+
+Characteristics:
+
+Can be upward, downward, or flat.
+Shows overall movement of data.
+4) Irregular / Noise Component
+
+Description:
+Random variations that cannot be explained by trend or seasonality.
+
+Examples:
+
+Pandemic impact
+Natural disasters
+Market crashes
+Sudden machine failures
+
+Characteristics:
+
+Random
+Unpredictable
+Short-term effects
+Formula Used in the Slide
+Original Series = Seasonal + Trend + Noise
+
+============
+What are the components of a Time Series?
+
+Answer:
+A Time Series consists of:
+
+Trend Component
+Seasonal Component
+Irregular (Noise) Component
+
+The original series is the combination of these components:
+
+Original Series = Trend + Seasonal + Noise.
+
+============
