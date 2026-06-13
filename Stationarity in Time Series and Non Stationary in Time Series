@@ -126,14 +126,3 @@ Result: Non-Stationary
 
 ==============
 
-| Condition           | Stationary? |
-| ------------------- | ----------- |
-| Mean constant       | ✅           |
-| Variance constant   | ✅           |
-| No trend            | ✅           |
-| Trend present       | ❌           |
-| Variance changing   | ❌           |
-| Sudden level shifts | ❌           |
-
-================
-
