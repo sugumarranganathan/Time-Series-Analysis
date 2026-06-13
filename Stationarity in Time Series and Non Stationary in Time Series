@@ -1,0 +1,139 @@
+| Condition           | Stationary? |
+| ------------------- | ----------- |
+| Mean constant       | ✅           |
+| Variance constant   | ✅           |
+| No trend            | ✅           |
+| Trend present       | ❌           |
+| Variance changing   | ❌           |
+| Sudden level shifts | ❌           |
+
+
+========================================
+
+
+A Time Series is Stationary when its mean and variance remain constant over time; otherwise, it is Non-Stationary.
+
+A Stationary Time Series is a series whose statistical properties remain constant over time.
+
+Key Condition:
+
+✅ Mean remains constant
+
+✅ Variance remains constant
+
+✅ No trend
+
+✅ No changing seasonality
+
+========
+
+Mean and Variance is same over the period of time
+
+This means the average value and spread of the data do not change as time progresses.
+
+=============
+
+| Stationary Series    | Non-Stationary Series                |
+| -------------------- | ------------------------------------ |
+| Mean is constant     | Mean changes over time               |
+| Variance is constant | Variance changes over time           |
+| No trend             | Upward or downward trend             |
+| Easier to model      | Difficult to model directly          |
+| Suitable for ARIMA   | Needs transformation before modeling |
+
+============
+
+Example 1: Stationary Series ✅
+Daily Temperature Inside an Air-Conditioned Server Room
+
+| Day | Temperature (°C) |
+| --- | ---------------- |
+| Mon | 22               |
+| Tue | 23               |
+| Wed | 22               |
+| Thu | 24               |
+| Fri | 23               |
+
+Mean ≈ 23°C
+
+Variance = Small
+
+The values fluctuate slightly around the same average.
+
+📈 Graph looks like a zig-zag around a fixed level.
+
+Result: Stationary Series
+
+================
+
+Example 2: Non-Stationary Series (Trend) ❌
+Company Revenue
+
+| Year | Revenue (Lakhs) |
+| ---- | --------------- |
+| 2020 | 50              |
+| 2021 | 70              |
+| 2022 | 95              |
+| 2023 | 130             |
+| 2024 | 180             |
+
+The average revenue keeps increasing.
+
+📈 Upward trend exists.
+
+Mean is changing over time.
+
+Result: Non-Stationary Series
+
+============
+
+Example 3: Non-Stationary Series (Mean Change) ❌
+Employee Salary
+
+| Period  | Average Salary |
+| ------- | -------------- |
+| Jan-Jun | ₹25,000        |
+| Jul-Dec | ₹40,000        |
+
+A sudden jump occurs.
+
+The average before and after is different.
+
+Mean changes.
+
+Result: Non-Stationary
+
+========
+
+Example 4: Non-Stationary Series (Variance Change) ❌
+Stock Market
+
+| Month | Daily Price Change |
+| ----- | ------------------ |
+| Jan   | ±2                 |
+| Feb   | ±3                 |
+| Mar   | ±20                |
+| Apr   | ±25                |
+
+
+Initially, fluctuations are small.
+
+Later, fluctuations become huge.
+
+Variance changes over time.
+
+Result: Non-Stationary
+
+==============
+
+| Condition           | Stationary? |
+| ------------------- | ----------- |
+| Mean constant       | ✅           |
+| Variance constant   | ✅           |
+| No trend            | ✅           |
+| Trend present       | ❌           |
+| Variance changing   | ❌           |
+| Sudden level shifts | ❌           |
+
+================
+
