@@ -1,0 +1,103 @@
+✅ Time Series Regression: Training and Test should be in sequence (series)
+
+✅ ML Regression: Training and Test can be random
+
+=======================================
+
+
+| Feature                 | Time Series Regression                    | Machine Learning Regression               |
+| ----------------------- | ----------------------------------------- | ----------------------------------------- |
+| **Data Type**           | Time-dependent data                       | General tabular data                      |
+| **Order of Data**       | Sequence matters                          | Sequence usually does not matter          |
+| **Main Goal**           | Forecast future values                    | Predict target variable                   |
+| **Example**             | Stock price prediction, sales forecasting | House price prediction, salary prediction |
+| **Uses Past Values?**   | Yes (lag values, trends, seasonality)     | Not necessarily                           |
+| **Patterns Considered** | Trend, Seasonality, Cyclic patterns       | Relationships between features and target |
+| **Common Algorithms**   | ARIMA, SARIMA, Prophet, LSTM              | Linear Regression, Random Forest, XGBoost |
+| **Input Example**       | Date + Previous Sales                     | Area, Bedrooms, Location                  |
+| **Output Example**      | Next month's sales                        | House price                               |
+
+
+============
+
+Time Series Regression predicts future values using historical data arranged in time order and considers trend and seasonality.
+
+Machine Learning Regression predicts a continuous target variable using independent features without necessarily considering time order.
+
+============
+Code Example – Time Series
+
+==================
+from statsmodels.tsa.ar_model import AutoReg
+
+model = AutoReg(train_data, lags=1)
+model_fit = model.fit()
+
+predictions = model_fit.predict(
+    start=len(train_data),
+    end=len(data)-1
+)
+
+==================
+Purpose:
+
+
+Learns from previous time values.
+Predicts future values.
+
+=================
+
+Code Example – ML Regression
+=================
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+
+model.fit(X_train, y_train)
+
+prediction = model.predict(X_test)
+
+===================
+Purpose:
+
+Learns relationship between features and target.
+Predicts continuous values
+
+====================
+
+Time Series Regression
+
+Description:
+Time Series Regression is a forecasting technique used to predict future values based on historical data arranged in chronological order (time sequence). It analyzes patterns such as trend, seasonality, and past observations to make predictions.
+
+Examples:
+
+Stock Price Forecasting
+Sales Forecasting
+Weather Prediction
+Demand Forecasting
+
+Key Point: Time order is important.
+
+==============
+
+Machine Learning Regression
+
+Description:
+Machine Learning Regression is a supervised learning technique used to predict a continuous 
+numerical value by learning the relationship between input features and a target variable. The order of data is generally not important.
+
+Examples:
+
+House Price Prediction
+Salary Prediction
+Insurance Cost Prediction
+Student Score Prediction
+
+Key Point: Relationship between features and target is important, not time order.
+
+Simple Difference
+
+Time Series Regression: Predicts future values using past time-based data.
+
+Machine Learning Regression: Predicts a numerical value using input features regardless of time sequence.
