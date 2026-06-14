@@ -1,0 +1,130 @@
+White Noise in Time Series
+
+White Noise is a completely random series of data points with:
+
+✅ No trend
+✅ No seasonality
+✅ No pattern
+✅ No relationship between past and future values
+
+Because there is no pattern, it cannot be forecasted.
+
+Simple Example
+
+Imagine tossing a coin:
+
+| Toss | Result |
+| ---- | ------ |
+| 1    | Head   |
+| 2    | Tail   |
+| 3    | Head   |
+| 4    | Tail   |
+| 5    | Head   |
+
+
+There is no predictable pattern.
+
+This is similar to White Noise.
+
+=========
+
+Real-Time Example
+
+Suppose a shop's daily sales are:
+
+| Day | Sales |
+| --- | ----: |
+| 1   |   102 |
+| 2   |    97 |
+| 3   |   105 |
+| 4   |    99 |
+| 5   |   101 |
+| 6   |    96 |
+| 7   |   104 |
+
+
+The values randomly move up and down around the same average.
+
+There is no clear trend or seasonality.
+
+This resembles White Noise.
+
+==============
+
+Characteristics of White Noise
+
+| Property           | White Noise |
+| ------------------ | ----------- |
+| Trend              | ❌ No        |
+| Seasonality        | ❌ No        |
+| Pattern            | ❌ No        |
+| Mean               | Constant    |
+| Variance           | Constant    |
+| Forecast Possible? | ❌ No        |
+| Stationary?        | ✅ Yes       |
+
+
+=========
+
+Why Is It Called "White" Noise?
+
+Just as white light contains all colors mixed together,
+
+white noise contains random frequencies mixed together without any recognizable pattern.
+
+Examples:
+
+TV static noise
+Radio hiss
+Fan background sound
+White Noise Graph
+
+The graph in your slide shows:
+
+Random spikes up and down
+No upward trend
+No downward trend
+No repeating pattern
+
+This is the typical appearance of White Noise.
+
+White Noise and Forecasting
+Trend Data
+100, 120, 140, 160, 180
+
+Easy to forecast because there is a pattern.
+
+White Noise
+100, 95, 108, 97, 103, 99, 106
+
+No pattern.
+
+Forecasting models cannot learn anything useful.
+
+=========
+
+
+Relation to ARIMA
+
+When building an ARIMA model:
+
+Convert data to stationary.
+Train the model.
+Check the residuals (errors).
+
+If residuals look like White Noise:
+
+✅ Good model
+
+Why?
+
+Because the model has already captured all meaningful patterns, leaving only random noise.
+
+Interview Answer
+
+White Noise is a completely random stationary time series with no trend, seasonality, or predictable pattern. 
+Since past values do not help predict future values, White Noise cannot be used for forecasting.
+In time series modeling, residuals should ideally resemble White Noise after fitting a good model.
+==========
+
+
