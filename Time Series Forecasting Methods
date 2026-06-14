@@ -1,0 +1,290 @@
+Time Series Forecasting Methods
+
+These methods are used to predict future values based on historical data.
+
+1. AR (Autoregression)
+Full Form
+
+Auto Regression (AR)
+
+Idea
+
+Predicts the current value using its own past values (lags).
+
+Example
+
+| Day | Sales |
+| --- | ----: |
+| 1   |   100 |
+| 2   |   120 |
+| 3   |   140 |
+
+
+Predict Day 4 using Days 1, 2, and 3.
+
+======
+
+2. MA (Moving Average)
+Full Form
+
+Moving Average (MA)
+
+Idea
+
+Uses past forecast errors to predict future values.
+
+Example
+
+If previous predictions made errors:
+
+| Day | Error |
+| --- | ----: |
+| 1   |    +5 |
+| 2   |    -3 |
+| 3   |    +2 |
+
+
+MA learns from these errors.
+
+✅ Uses past errors
+
+========
+
+3. ARMA
+Full Form
+
+Autoregressive Moving Average
+
+Idea
+
+Combines:
+
+AR → Past values
+MA → Past errors
+Example
+
+Predict today's sales using:
+
+Yesterday's sales
+Yesterday's prediction error
+Use When
+
+✅ Data is stationary
+
+=========
+
+4. ARIMA
+Full Form
+
+Autoregressive Integrated Moving Average
+
+Idea
+
+Combines:
+
+AR = Past values
+I = Differencing
+MA = Past errors
+Use When
+
+Data is non-stationary.
+
+First make it stationary using differencing.
+
+Then apply AR + MA.
+
+Example
+
+House prices:
+
+100,120,150,180
+
+Apply differencing:
+
+20,30,30
+
+Then model using AR and MA.
+
+=========
+
+5. SARIMA
+Full Form
+
+Seasonal Autoregressive Integrated Moving Average
+
+Idea
+
+ARIMA + Seasonality
+
+Example
+
+Ice cream sales:
+
+| Month    | Sales |
+| -------- | ----: |
+| May      |  High |
+| June     |  High |
+| December |   Low |
+
+Pattern repeats every year.
+
+SARIMA captures these seasonal effects.
+
+6. SARIMAX
+Full Form
+
+Seasonal ARIMA with Exogenous Variables
+
+Idea
+
+SARIMA + External Factors
+
+Example
+
+Predict ice cream sales using:
+
+Temperature
+Holiday
+Festival
+
+| Temp | Sales |
+| ---- | ----: |
+| 40°C |  High |
+| 20°C |   Low |
+
+Temperature is an external (exogenous) variable.
+
+=======
+
+
+
+7. VAR
+Full Form
+
+Vector Autoregression
+
+Idea
+
+Used when multiple variables influence each other.
+
+Example
+
+| Month | Sales | Advertising |
+| ----- | ----: | ----------: |
+| Jan   |   100 |          20 |
+| Feb   |   120 |          25 |
+
+Sales affect advertising and advertising affects sales.
+
+VAR models all variables together.
+
+8. VARMA
+Full Form
+
+Vector Autoregressive Moving Average
+
+Idea
+
+VAR + MA
+
+Uses:
+
+Multiple variables
+Past values
+Past errors
+Example
+
+Variables:
+
+Sales
+Profit
+Advertising
+
+Uses all three plus prediction errors.
+
+9. VARMAX
+Full Form
+
+Vector Autoregressive Moving Average with Exogenous Variables
+
+Idea
+
+VARMA + External Variables
+
+Example
+
+Predict:
+
+Sales
+Profit
+
+Using:
+
+Past sales
+Past profit
+Temperature
+Holiday
+
+External variables improve forecasting.
+
+10. SES
+Full Form
+
+Simple Exponential Smoothing
+
+Idea
+
+Gives more importance to recent observations.
+
+Example
+
+| Day | Sales |
+| --- | ----: |
+| 1   |   100 |
+| 2   |   105 |
+| 3   |   120 |
+
+
+Recent sales get higher weight.
+
+Use When
+
+✅ No trend
+✅ No seasonality
+
+Quick Comparison Table
+
+| Method  | Uses Lag | Uses Errors | Seasonality | Multiple Variables     |
+| ------- | -------- | ----------- | ----------- | ---------------------- |
+| AR      | ✅        | ❌           | ❌           | ❌                      |
+| MA      | ❌        | ✅           | ❌           | ❌                      |
+| ARMA    | ✅        | ✅           | ❌           | ❌                      |
+| ARIMA   | ✅        | ✅           | ❌           | ❌                      |
+| SARIMA  | ✅        | ✅           | ✅           | ❌                      |
+| SARIMAX | ✅        | ✅           | ✅           | ❌ + External Variables |
+| VAR     | ✅        | ❌           | ❌           | ✅                      |
+| VARMA   | ✅        | ✅           | ❌           | ✅                      |
+| VARMAX  | ✅        | ✅           | ❌           | ✅ + External Variables |
+| SES     | ❌        | ❌           | ❌           | ❌                      |
+
+
+=====
+
+AR      = Past Values
+MA      = Past Errors
+ARMA    = AR + MA
+ARIMA   = ARMA + Differencing
+SARIMA  = ARIMA + Seasonality
+SARIMAX = SARIMA + External Variables
+
+VAR     = Multiple Variables
+VARMA   = VAR + MA
+VARMAX  = VARMA + External Variables
+
+SES     = Recent Values Get More Weight
+
+
+
+
+
+✅ Uses Lag values
