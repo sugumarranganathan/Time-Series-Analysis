@@ -1,0 +1,133 @@
+| Feature           | Additive          | Multiplicative             |
+| ----------------- | ----------------- | -------------------------- |
+| Formula           | Y = T + S + C + E | Y = T × S × C × E          |
+| Seasonal Effect   | Constant          | Changes with trend         |
+| Variation         | Same size         | Increasing/Decreasing size |
+| Example           | Temperature       | Sales Revenue              |
+| Easy to Interpret | Yes               | Moderate                   |
+
+============
+
+1. Additive Time Series Model
+
+In an additive model, all components are added together.
+
+Y=T+S+C+E
+
+Where:
+
+Y = Actual Time Series Data
+T = Trend
+S = Seasonality
+C = Cyclical Component
+E = Error (Random Noise)
+
+Y=T+S+C+E
+
+Meaning
+
+The seasonal effect remains approximately constant over time.
+
+Example: Ice Cream Sales
+
+| Month | Trend | Seasonal Effect | Sales |
+| ----- | ----- | --------------- | ----- |
+| Jan   | 100   | +20             | 120   |
+| Feb   | 110   | +20             | 130   |
+| Mar   | 120   | +20             | 140   |
+
+Notice:
+
+Seasonal increase = 20 units every month
+Does not change with trend
+
+✅ Use Additive Model when seasonal fluctuations are constant
+
+=========
+
+2. Multiplicative Time Series Model
+
+In a multiplicative model, components are multiplied.
+
+Y=T×S×C×E
+
+Y=T×S×C×E
+
+Meaning
+
+The seasonal effect changes according to the trend.
+
+Example: Online Shopping Sales
+
+| Month | Trend | Seasonal Factor | Sales |
+| ----- | ----- | --------------- | ----- |
+| Jan   | 100   | 1.2             | 120   |
+| Feb   | 200   | 1.2             | 240   |
+| Mar   | 300   | 1.2             | 360   |
+
+Notice:
+
+Seasonal effect grows as trend grows.
+20% increase on 100 = 20
+20% increase on 300 = 60
+
+✅ Use Multiplicative Model when seasonal fluctuations increase or decrease with the level of data.
+
+============
+
+Components Shown in the Image
+1. Trend (T)
+
+Long-term direction of data.
+
+Example:
+
+Company revenue increasing every year.
+Population growth.
+
+📈 Upward trend:
+
+100 → 120 → 140 → 160
+2. Seasonality (S)
+
+Pattern repeating at fixed intervals.
+
+Examples:
+
+Ice cream sales higher in summer.
+E-commerce sales during Diwali.
+Hotel bookings during holidays.
+
+🔄 Repeats every year/month/week.
+
+3. Cyclical Component (C)
+
+Long-term ups and downs that do not occur at fixed intervals.
+
+Examples:
+
+Economic boom and recession.
+Stock market cycles.
+
+📉📈 Cycle length is not fixed.
+
+4. Error / Noise (E)
+
+Random variation that cannot be predicted.
+
+Examples:
+
+Sudden strike
+Natural disaster
+Unexpected event
+
+========
+
+When do we use Additive Time Series?
+
+👉 When seasonal variations are roughly constant over time.
+
+When do we use Multiplicative Time Series?
+
+👉 When seasonal variations increase or decrease proportionally with the trend.
+
