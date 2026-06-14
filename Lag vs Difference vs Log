@@ -1,0 +1,47 @@
+| Technique  | Purpose                           |
+| ---------- | --------------------------------- |
+| Lag        | Previous values (t-1, t-2)        |
+| Difference | Remove trend                      |
+| Log        | Reduce variance and smooth growth |
+
+
+==============
+
+| Lag                                   | Difference                                    | Log                                                      |    |
+| ------------------------------------- | --------------------------------------------- | -------------------------------------------------------- | -- |
+| Previous observation (t-1, t-2, etc.) | Current value minus previous value            | Mathematical transformation of the value                 |    |
+| Used for forecasting features         | Used to remove trend and achieve stationarity | Used to stabilize variance and handle exponential growth |    |
+| Example: 180                          | Example: 220−180=40                           | Example: log(220)=2.34                                   |    |
+
+=============
+
+| Technique  | Analogy                                             |
+| ---------- | --------------------------------------------------- |
+| Lag        | Looking at yesterday's sales                        |
+| Difference | Checking how much sales changed from yesterday      |
+| Log        | Compressing very large numbers into smaller numbers |
+
+
+==============
+
+Original Data
+      ↓
+ADF Test (uses lag terms internally)
+      ↓
+Non-Stationary?
+      ↓ Yes
+Log Transform (if needed)
+      ↓
+Differencing
+      ↓
+ADF Test Again
+      ↓
+Stationary Data
+      ↓
+ARIMA/SARIMA Model
+      ↓
+Model uses Lag Values
+
+============
+
+
