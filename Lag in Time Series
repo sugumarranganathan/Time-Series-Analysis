@@ -1,0 +1,97 @@
+What is Lag in Time Series?
+
+A Lag means using a previous value of the time series.
+
+Simply:
+
+Lag 1 (t-1) = Previous value
+Lag 2 (t-2) = Value before previous value
+Lag 3 (t-3) = Three steps back
+Example from Your Image
+
+| Date     | Value | Value(t-1) | Value(t-2) |
+| -------- | ----: | ---------: | ---------: |
+| 1/1/2017 |   200 |         NA |         NA |
+| 1/2/2017 |   220 |        200 |         NA |
+| 1/3/2017 |   215 |        220 |        200 |
+| 1/4/2017 |   230 |        215 |        220 |
+| 1/5/2017 |   235 |        230 |        215 |
+| 1/6/2017 |   225 |        235 |        230 |
+
+=======
+
+Understanding Lag 1
+
+For date 1/4/2017:
+
+Current Value = 230
+
+Lag 1 = Previous day's value
+
+230 ← Current Value
+215 ← Lag 1
+Understanding Lag 2
+
+For date 1/4/2017:
+
+Current Value = 230
+
+230 ← Current Value
+215 ← Lag 1
+220 ← Lag 2
+==========
+Real-Time Example
+
+Suppose daily sales:
+| Day | Sales |
+| --- | ----: |
+| Mon |   100 |
+| Tue |   120 |
+| Wed |   110 |
+| Thu |   130 |
+
+----
+
+For Thursday:
+
+| Feature       | Value |
+| ------------- | ----- |
+| Current Sales | 130   |
+| Lag 1         | 110   |
+| Lag 2         | 120   |
+
+========
+
+Why Do We Use Lag?
+
+Time series assumes:
+
+"Past values influence future values."
+
+Example:
+
+Today's stock price is related to yesterday's stock price.
+
+Today's temperature is related to yesterday's temperature.
+
+Today's sales are related to yesterday's sales.
+
+=================
+
+| Day   | Value | Lag 1 | Difference |
+| ----- | ----: | ----: | ---------: |
+| Day 1 |   200 |    NA |         NA |
+| Day 2 |   220 |   200 |         20 |
+| Day 3 |   215 |   220 |         -5 |
+| Day 4 |   230 |   215 |         15 |
+
+This differencing often removes trends and helps convert non-stationary data into stationary data.
+
+-----------------
+
+Lag is a previous observation in a time series. Lag 1 refers to the immediately previous value, Lag 2 refers to the value two time periods earlier, 
+and so on. Lags are used in forecasting models and ADF tests to understand how past values influence current values.
+
+
+
+Suppose daily sales:
