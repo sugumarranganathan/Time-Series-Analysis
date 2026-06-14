@@ -1,0 +1,93 @@
+ADF (Augmented Dickey-Fuller) Test is a statistical test used to determine whether a time series is stationary or non-stationary. 
+If the p-value is less than 0.05, we reject the null hypothesis
+and conclude that the series is stationary. It is commonly used before applying ARIMA and other forecasting models.
+
+=========
+
+Software computes:
+
+Test Statistic
+p-value
+Critical Values
+
+Usually using Python:
+-------------------
+from statsmodels.tsa.stattools import adfuller
+result = adfuller(data)
+print("ADF Statistic:", result[0])
+print("p-value:", result[1])
+--------------------
+
+Decision Rule
+Case 1
+Value	Result
+p-value = 0.01	Less than 0.05
+
+Reject H₀
+
+✅ Data is Stationary
+
+Case 2
+Value	Result
+p-value = 0.30	Greater than 0.05
+
+Fail to Reject H₀
+
+❌ Data is Non-Stationary
+
+================
+
+Real-Time Example 1: Stock Prices
+
+| Day | Price |
+| --- | ----- |
+| 1   | 100   |
+| 2   | 105   |
+| 3   | 110   |
+| 4   | 120   |
+| 5   | 130   |
+
+
+Prices keep increasing.
+
+ADF often gives:
+
+p-value = 0.45
+
+Since:
+
+0.45 > 0.05
+
+Result:
+
+❌ Non-Stationary
+
+============
+
+In Python
+
+-----------
+from statsmodels.tsa.stattools import adfuller
+data = [100,105,110,120,130]
+result = adfuller(data)
+print("ADF Statistic:", result[0])
+print("p-value:", result[1])
+------------
+
+Output looks like:
+
+ADF Statistic: -1.20
+p-value: 0.45
+
+============
+
+Run ADF test.
+
+Read the p-value from the output.
+Compare with 0.05.
+
+p-value	Conclusion
+< 0.05	Stationary
+> 0.05	Non-Stationary
+
+=============
