@@ -1,0 +1,59 @@
+from statsmodels.tsa.stattools import adfuller
+
+def adf_test(timeseries):
+    print('Results of Dickey-Fuller Test:')
+
+    dftest = adfuller(timeseries, autolag='AIC')
+
+    dfoutput = pd.Series(
+        dftest[0:4],
+        index=['Test Statistic', 'p-value',
+               '#Lags Used', 'Number of Observations Used']
+    )
+
+    for key, value in dftest[4].items():
+        dfoutput['Critical Value (%s)' % key] = value
+
+    print(dfoutput)
+
+    ans = dfoutput
+
+    if (ans['Test Statistic'] < ans['Critical Value (1%)'] or
+        ans['Test Statistic'] < ans['Critical Value (5%)'] or
+        ans['Test Statistic'] < ans['Critical Value (10%)']):
+
+        print("Condition: statistic < any critical value and p-value < 0.05 to reject null hypothesis")
+        print("Reject null hypothesis: Non Stationarity")
+        print("Accept Alternate hypothesis: Stationarity")
+
+    else:
+        print("Condition: statistic < any critical value and p-value < 0.05 to reject null hypothesis")
+        print("Accept null hypothesis: Non Stationarity")
+        print("Reject Alternate hypothesis: Stationarity")
+
+    return dfoutput
+
+--------------------------------
+
+| Line No | Code                                                                                                                                                                    | Description                                                  |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 1       | `from statsmodels.tsa.stattools import adfuller`                                                                                                                        | Import ADF test function                                     |
+| 2       | `def adf_test(timeseries):`                                                                                                                                             | Create a function named `adf_test`                           |
+| 3       | `print('Results of Dickey-Fuller Test:')`                                                                                                                               | Print heading                                                |
+| 4       | `dftest = adfuller(timeseries, autolag='AIC')`                                                                                                                          | Perform ADF test on the time series                          |
+| 5       | `dfoutput = pd.Series(dftest[0:4], index=['Test Statistic', 'p-value', '#Lags Used', 'Number of Observations Used'])`                                                   | Store ADF results in a Pandas Series                         |
+| 6       | `for key, value in dftest[4].items():`                                                                                                                                  | Loop through critical values                                 |
+| 7       | `dfoutput['Critical Value (%s)' % key] = value`                                                                                                                         | Add critical values (1%, 5%, 10%) to output                  |
+| 8       | `print(dfoutput)`                                                                                                                                                       | Print all ADF results                                        |
+| 9       | `ans = dfoutput`                                                                                                                                                        | Store output in variable `ans`                               |
+| 10      | `if (ans['Test Statistic'] < ans['Critical Value (1%)'] or ans['Test Statistic'] < ans['Critical Value (5%)'] or ans['Test Statistic'] < ans['Critical Value (10%)']):` | Check whether test statistic is less than any critical value |
+| 11      | `print("Condition: statistic < any critical value and p-value <0.05 to reject null hypothesis")`                                                                        | Print rejection condition                                    |
+| 12      | `print("Reject null hypothesis: Non Stationarity")`                                                                                                                     | Reject H₀                                                    |
+| 13      | `print("Accept Alternate hypothesis: Stationarity")`                                                                                                                    | Accept H₁                                                    |
+| 14      | `else:`                                                                                                                                                                 | Otherwise                                                    |
+| 15      | `print("Condition: statistic < any critical value and p-value <0.05 to reject null hypothesis")`                                                                        | Print condition                                              |
+| 16      | `print("Accept null hypothesis: Non Stationarity")`                                                                                                                     | Accept H₀                                                    |
+| 17      | `print("Reject Alternate hypothesis: Stationarity")`                                                                                                                    | Reject H₁                                                    |
+| 18      | `return dfoutput`                                                                                                                                                       | Return final ADF output                                      |
+
+=============
