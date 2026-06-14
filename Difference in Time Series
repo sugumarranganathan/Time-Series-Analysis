@@ -1,0 +1,76 @@
+Difference in Time Series
+
+Differencing is a technique used to convert non-stationary data into stationary data.
+
+Difference = Current Value − Previous Value (Lag 1)
+
+Example
+
+Original Data:
+
+| Day | Sales |
+| --- | ----: |
+| 1   |   100 |
+| 2   |   120 |
+| 3   |   150 |
+| 4   |   180 |
+| 5   |   220 |
+
+his data has an upward trend.
+
+❌ Non-Stationary
+
+=======
+Apply Differencing
+
+| Day | Sales | Difference |
+| --- | ----: | ---------: |
+| 1   |   100 |         NA |
+| 2   |   120 |         20 |
+| 3   |   150 |         30 |
+| 4   |   180 |         30 |
+| 5   |   220 |         40 |
+
+Calculation:
+
+Day 2 = 120 − 100 = 20
+Day 3 = 150 − 120 = 30
+Day 4 = 180 − 150 = 30
+Day 5 = 220 − 180 = 40
+
+Now we analyze the changes rather than the original values.
+
+============
+
+Python Code
+
+-------------------
+df['First_Difference'] = df['Sales'] - df['Sales'].shift(1)
+
+# or
+
+df['First_Difference'] = df['Sales'].diff()
+--------------------
+
+Why Use Differencing?
+
+| Purpose                              | Benefit             |
+| ------------------------------------ | ------------------- |
+| Remove Trend                         | Makes data stable   |
+| Convert Non-Stationary to Stationary | Required for ARIMA  |
+| Improve Forecasting                  | Better predictions  |
+| Reduce Unit Root Effect              | Helps pass ADF test |
+
+
+Differencing is a technique used in time series analysis to remove trend and make a non-stationary series stationary. 
+It is calculated by subtracting the previous observation (lag 1) from the current observation
+
+============
+
+
+
+
+
+
+
+
