@@ -1,0 +1,215 @@
+AR (AutoRegression)
+------------------
+| Item      | Description                                               |
+| --------- | --------------------------------------------------------- |
+| Formula   | Current Value = Previous Values                           |
+| Example   | Predict today's stock price using yesterday's stock price |
+| Real Life | Temperature forecasting                                   |
+
+
+Example:
+
+| Day       | Price |
+| --------- | ----- |
+| Monday    | 100   |
+| Tuesday   | 105   |
+| Wednesday | ?     |
+
+AR uses Monday and Tuesday to predict Wednesday.
+
+===========
+
+MA (Moving Average)
+
+| Item      | Description                                                                    |
+| --------- | ------------------------------------------------------------------------------ |
+| Formula   | Current Value = Previous Errors                                                |
+| Example   | If previous forecasts were wrong, use those errors to improve future forecasts |
+| Real Life | Sales forecasting                                                              |
+
+Example:
+
+| Forecast | Actual | Error |
+| -------- | ------ | ----- |
+| 100      | 105    | +5    |
+| 110      | 108    | -2    |
+
+
+MA learns from these errors.
+
+==============
+
+ARMA
+
+| Item     | Description               |
+| -------- | ------------------------- |
+| Combines | AR + MA                   |
+| Uses     | Past values + Past errors |
+| Example  | Stock price prediction    |
+
+
+Example:
+
+Today's Price
+      =
+Past Prices + Past Errors
+
+=============
+
+ARIMA
+
+| Item    | Description              |
+| ------- | ------------------------ |
+| AR      | Past values              |
+| I       | Differencing             |
+| MA      | Past errors              |
+| Example | Stock market forecasting |
+
+
+Workflow:
+
+Original Data
+      ↓
+Differencing
+      ↓
+Stationary Data
+      ↓
+ARIMA
+
+Example:
+
+| Year | Sales |
+| ---- | ----- |
+| 2020 | 100   |
+| 2021 | 150   |
+| 2022 | 200   |
+
+ARIMA removes trend first
+===============
+
+SARIMA
+
+| Item                | Description                 |
+| ------------------- | --------------------------- |
+| ARIMA + Seasonality | Captures repeating patterns |
+| Example             | Ice cream sales             |
+
+Example:
+
+| Month    | Sales |
+| -------- | ----- |
+| June     | High  |
+| July     | High  |
+| December | Low   |
+
+SARIMA learns seasonal cycles.
+
+===========
+
+SARIMAX
+
+| Item                        | Description                                         |
+| --------------------------- | --------------------------------------------------- |
+| SARIMA + External Variables |                                                     |
+| Example                     | Sales forecast using seasonality and advertisements |
+
+
+Example:
+
+| Month | Sales | Ads |
+| ----- | ----- | --- |
+| Jan   | 100   | 10  |
+| Feb   | 150   | 20  |
+
+Ads affect sales.
+
+============
+
+VAR
+
+| Item                                  | Description                  |
+| ------------------------------------- | ---------------------------- |
+| Forecasts multiple variables together |                              |
+| Example                               | Stock Price + Trading Volume |
+
+
+Example:
+
+| Day | Price | Volume |
+| --- | ----- | ------ |
+| Mon | 100   | 5000   |
+| Tue | 102   | 5200   |
+
+Both influence each other.
+
+============
+
+VARMA
+
+| Item                 | Description                              |
+| -------------------- | ---------------------------------------- |
+| VAR + Error Modeling |                                          |
+| Example              | Stock Price + Volume + Prediction Errors |
+
+
+Used when multiple variables interact and contain error patterns.
+
+==========
+
+VARMAX
+
+| Item                       | Description                          |
+| -------------------------- | ------------------------------------ |
+| VARMA + External Variables |                                      |
+| Example                    | Stock Price + Volume + Interest Rate |
+
+| Day | Price | Volume | Interest Rate |
+| --- | ----- | ------ | ------------- |
+| Mon | 100   | 5000   | 5%            |
+| Tue | 102   | 5200   | 5.2%          |
+
+
+External factors influence forecasting.
+
+===========
+
+Quick Comparison Table
+
+| Model   | Past Values | Past Errors | Seasonality | Multiple Variables | External Variables |
+| ------- | ----------- | ----------- | ----------- | ------------------ | ------------------ |
+| AR      | ✅           | ❌           | ❌           | ❌                  | ❌                  |
+| MA      | ❌           | ✅           | ❌           | ❌                  | ❌                  |
+| ARMA    | ✅           | ✅           | ❌           | ❌                  | ❌                  |
+| ARIMA   | ✅           | ✅           | ❌           | ❌                  | ❌                  |
+| SARIMA  | ✅           | ✅           | ✅           | ❌                  | ❌                  |
+| SARIMAX | ✅           | ✅           | ✅           | ❌                  | ✅                  |
+| VAR     | ✅           | ❌           | ❌           | ✅                  | ❌                  |
+| VARMA   | ✅           | ✅           | ❌           | ✅                  | ❌                  |
+| VARMAX  | ✅           | ✅           | ❌           | ✅                  | ✅                  |
+
+============
+
+| Question                                           | Answer             |
+| -------------------------------------------------- | ------------------ |
+| Which model is most commonly used?                 | ARIMA              |
+| Which model handles seasonality?                   | SARIMA             |
+| Which model uses external variables?               | SARIMAX and VARMAX |
+| Which model forecasts multiple variables together? | VAR, VARMA, VARMAX |
+| Which model uses only past values?                 | AR                 |
+
+===========
+
+AR      → Past Values
+MA      → Past Errors
+ARMA    → Values + Errors
+ARIMA   → ARMA + Differencing
+SARIMA  → ARIMA + Seasonality
+SARIMAX → SARIMA + External Variables
+VAR     → Multiple Variables
+VARMA   → VAR + Errors
+VARMAX  → VARMA + External Variables
+
+==========
+
+
+
