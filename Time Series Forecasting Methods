@@ -1,6 +1,21 @@
 Time Series Forecasting Methods
 
 These methods are used to predict future values based on historical data.
+=======================
+
+| Algorithm   | Full Form                                                     | Simple Meaning                                 | Real-Time Example                                           | When to Use                                    |
+| ----------- | ------------------------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------- | ---------------------------------------------- |
+| **AR**      | AutoRegression                                                | Predicts future values using past values only. | Predict tomorrow's stock price using previous stock prices. | When data depends strongly on past values.     |
+| **MA**      | Moving Average                                                | Predicts using past forecast errors.           | Forecast sales based on previous prediction mistakes.       | When random shocks/errors affect data.         |
+| **ARMA**    | AutoRegression Moving Average                                 | Combines AR and MA.                            | Predict stock prices using past prices and past errors.     | Stationary data with both patterns and errors. |
+| **ARIMA**   | AutoRegression Integrated Moving Average                      | ARMA + Differencing for non-stationary data.   | Forecast stock prices after making data stationary.         | Most common forecasting model.                 |
+| **SARIMA**  | Seasonal ARIMA                                                | ARIMA + Seasonal patterns.                     | Predict monthly ice cream sales.                            | Seasonal data.                                 |
+| **SARIMAX** | Seasonal ARIMA with Exogenous Variables                       | SARIMA + external factors.                     | Predict sales using seasonality and advertising spend.      | Seasonal data with external influences.        |
+| **VAR**     | Vector AutoRegression                                         | Forecast multiple related variables together.  | Predict stock price and trading volume simultaneously.      | Multiple time series influence each other.     |
+| **VARMA**   | Vector AutoRegression Moving Average                          | VAR + MA component.                            | Forecast stock price, volume, and error effects together.   | Multiple stationary variables.                 |
+| **VARMAX**  | Vector AutoRegression Moving Average with Exogenous Variables | VARMA + external factors.                      | Forecast stock price using volume and interest rates.       | Multiple variables + external factors.         |
+
+=================
 
 1. AR (Autoregression)
 Full Form
