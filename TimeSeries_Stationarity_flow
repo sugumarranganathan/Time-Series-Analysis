@@ -1,0 +1,82 @@
+Complete Workflow
+
+Load Dataset
+      ↓
+Time Series Plot
+      ↓
+Seasonal Decomposition
+      ↓
+ADF Test
+      ↓
+Stationary?
+      ↓
+ACF & PACF
+      ↓
+Lag Plot
+      ↓
+Approximate Entropy
+      ↓
+Sample Entropy
+      ↓
+Forecastability Analysis
+      ↓
+ARIMA / SARIMA / Prophet / LSTM
+
+========
+
+TimeSeries_Stationarity_pre_processing_and_stationarity_checking_phase
+
+| Test     | Result                 |
+| -------- | ---------------------- |
+| ADF Test | Stationary             |
+| ACF      | Strong Autocorrelation |
+| PACF     | AR(1) Pattern          |
+| Lag Plot | Strong Relationship    |
+| ApEn     | Low Randomness         |
+| SampEn   | Low Complexity         |
+
+=========
+
+| Entropy Value | Interpretation          |
+| ------------- | ----------------------- |
+| Near 0        | Highly Predictable      |
+| 0.1 – 0.5     | Moderate Predictability |
+| > 1           | Highly Random           |
+| > 2           | Difficult to Forecast   |
+
+=============
+
+| EDA Technique       | Purpose                               | Example                              |
+| ------------------- | ------------------------------------- | ------------------------------------ |
+| Time Series Plot    | Identify trend and pattern            | Stock prices increasing over time    |
+| Summary Statistics  | Check mean, min, max, std             | Average sales = 500                  |
+| Missing Value Check | Find gaps in dates                    | Missing stock market days            |
+| Trend Analysis      | Detect upward/downward movement       | Sales increasing yearly              |
+| Seasonal Analysis   | Find repeating patterns               | Ice cream sales rise every summer    |
+| Stationarity Test   | Check if mean & variance are constant | Required for ARIMA                   |
+| ACF Plot            | Check autocorrelation                 | Current value depends on past values |
+| PACF Plot           | Find direct lag relationships         | Helps find AR order                  |
+| Lag Plot            | Visual autocorrelation                | Pattern vs random                    |
+| Decomposition       | Separate trend, seasonality, residual | Understand components                |
+| Entropy Analysis    | Measure randomness                    | Predictable or not                   |
+| Outlier Detection   | Find abnormal points                  | Sudden stock crash                   |
+
+============
+Entire Workflow
+
+| Step | Activity               | Why?                  |
+| ---- | ---------------------- | --------------------- |
+| 1    | Load Dataset           | Read stock data       |
+| 2    | Plot Series            | Find trend            |
+| 3    | Seasonal Decomposition | Find seasonality      |
+| 4    | ADF Test               | Check stationarity    |
+| 5    | ACF                    | Find MA(q)            |
+| 6    | PACF                   | Find AR(p)            |
+| 7    | Lag Plot               | Check autocorrelation |
+| 8    | Approximate Entropy    | Measure randomness    |
+| 9    | Sample Entropy         | Measure complexity    |
+| 10   | Forecasting Model      | ARIMA/SARIMA/LSTM     |
+
+===========
+
+
