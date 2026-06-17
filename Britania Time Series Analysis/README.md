@@ -191,4 +191,3 @@ GitHub: https://github.com/sugumarranganathan
 
 ---
 
-⭐ If you found this project useful, consider giving the repository a star.
