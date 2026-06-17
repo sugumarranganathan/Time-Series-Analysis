@@ -181,7 +181,7 @@ Forecasts help investors and analysts understand potential future price movement
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Prepared by
 
 **Sugumar Ranganathan (MBA)**
 
