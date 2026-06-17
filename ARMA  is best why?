@@ -1,0 +1,75 @@
+Why ARMA?
+
+ARMA combines both ideas.
+-----------------------
+
+AR Part
+=======
+
+Uses past prices.
+
+Today's Price
+↓
+Yesterday's Price
+↓
+2 Days Ago Price
+
+MA Part
+=======
+
+Uses past errors.
+
+Today's Error
+↓
+Yesterday's Error
+↓
+2 Days Ago Error
+
+Combined:
+
+Past Prices
++
+Past Errors
+=========================
+
+Real-Life Example
+-----------------
+
+Suppose Britannia share today is ₹4800.
+
+MA Thinking
+Yesterday forecast was wrong by ₹2.
+Use that error to improve tomorrow's forecast.
+
+AR Thinking
+Yesterday price was ₹4795.
+Use previous prices to estimate tomorrow.
+
+ARMA Thinking
+Yesterday price was ₹4795
+AND
+Yesterday forecast error was ₹2
+
+Use both information sources.
+
+This is why ARMA is usually better.
+
+Your Results Prove It
+
+MA Model
+Model	RMSE
+MA(3)	3355.43
+ARMA Model
+Model	RMSE
+ARMA(1,1)	51.93
+
+Improvement:
+
+3355.43
+   ↓
+51.93
+
+Huge reduction in forecasting error.
+
+===========
+
