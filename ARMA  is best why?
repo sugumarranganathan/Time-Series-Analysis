@@ -73,3 +73,47 @@ Huge reduction in forecasting error.
 
 ===========
 
+Historical Britannia Stock Data
+                │
+                ▼
+      Data Preprocessing
+                │
+                ▼
+        Exploratory Analysis
+                │
+                ▼
+          ADF Test
+                │
+     ┌──────────┴──────────┐
+     │                     │
+ Non-Stationary       Stationary
+     │                     │
+     ▼                     ▼
+Log Transformation      Modeling
+     │
+Differencing
+     │
+ADF Test
+     │
+Stationary Data
+     │
+     ▼
+ Build MA Models
+     │
+Evaluate RMSE
+     │
+Best MA Model
+     │
+     ▼
+ Build ARMA Model
+     │
+Forecast Future Prices
+     │
+Evaluate RMSE & MAPE
+     │
+     ▼
+Model Comparison
+     │
+     ▼
+Final Forecast
+
