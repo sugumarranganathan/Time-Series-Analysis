@@ -1,0 +1,143 @@
+| ARIMA Order (p,d,q) | p | d | q | Model Name   | Description               |
+| ------------------- | - | - | - | ------------ | ------------------------- |
+| (1,0,0)             | 1 | 0 | 0 | AR(1)        | Auto Regressive Model     |
+| (2,0,0)             | 2 | 0 | 0 | AR(2)        | Auto Regressive Model     |
+| (0,0,1)             | 0 | 0 | 1 | MA(1)        | Moving Average Model      |
+| (0,0,2)             | 0 | 0 | 2 | MA(2)        | Moving Average Model      |
+| (1,0,1)             | 1 | 0 | 1 | ARMA(1,1)    | AR + MA Combined          |
+| (2,0,1)             | 2 | 0 | 1 | ARMA(2,1)    | AR + MA Combined          |
+| (1,1,1)             | 1 | 1 | 1 | ARIMA(1,1,1) | ARMA with Differencing    |
+| (2,1,2)             | 2 | 1 | 2 | ARIMA(2,1,2) | ARMA with Differencing    |
+| (1,2,1)             | 1 | 2 | 1 | ARIMA(1,2,1) | Second-order Differencing |
+| (1,1,1)(1,1,1,12)   | 1 | 1 | 1 | SARIMA       | Seasonal ARIMA            |
+
+==============
+| Symbol | Think As        |
+| ------ | --------------- |
+| **p**  | **Past Values** |
+| **d**  | **Difference**  |
+| **q**  | **Past Errors** |
+
+===========
+p = Auto Regressive (AR) Order
+
+| Parameter | Full Form                 | Purpose                                                                        |
+| --------- | ------------------------- | ------------------------------------------------------------------------------ |
+| **p**     | **Auto Regressive Order** | Number of previous observations (lag values) used to predict the current value |
+
+=========
+
+Example
+
+Suppose Britannia stock prices are:
+
+| Day       | Close Price |
+| --------- | ----------- |
+| Monday    | 6200        |
+| Tuesday   | 6250        |
+| Wednesday | 6300        |
+| Thursday  | ?           |
+
+===========
+
+If p = 1:
+
+Thursday's prediction uses Wednesday's price only.
+
+If p = 2:
+
+Thursday's prediction uses Tuesday's and Wednesday's prices.
+
+If p = 3:
+
+Thursday's prediction uses Monday's, Tuesday's, and Wednesday's prices.
+========
+
+Simple Meaning
+
+| p Value | Uses          |
+| ------- | ------------- |
+| p = 1   | Last 1 value  |
+| p = 2   | Last 2 values |
+| p = 3   | Last 3 values |
+
+=======
+
+p stands for Auto Regressive Order.
+It indicates how many previous observations (lag values) are used by the model to predict the current value. 
+For example, p = 2 means the model uses the last two observations for forecasting.
+
+=======
+
+| Parameter | Full Form                  | Meaning                                                   | Example                          |
+| --------- | -------------------------- | --------------------------------------------------------- | -------------------------------- |
+| **p**     | Auto Regressive (AR) Order | Number of past observations used for prediction           | p = 2 → Uses last 2 days' prices |
+| **d**     | Differencing Order         | Number of times data is differenced to make it stationary | d = 1 → First difference         |
+| **q**     | Moving Average (MA) Order  | Number of past forecast errors used                       | q = 1 → Uses last 1 error        |
+
+======
+
+| Parameter | Value | Interpretation        |
+| --------- | ----- | --------------------- |
+| p         | 1     | Uses previous 1 value |
+| d         | 1     | Data differenced once |
+| q         | 1     | Uses previous 1 error |
+
+======
+
+Stock Price Example
+
+Suppose Britannia closing prices are:
+
+| Day       | Close Price |
+| --------- | ----------- |
+| Monday    | 6200        |
+| Tuesday   | 6250        |
+| Wednesday | 6300        |
+| Thursday  | 6280        |
+
+
+p = 1 (AR)
+
+Uses Wednesday's price to predict Thursday.
+
+==============
+d = 1
+
+Difference series:
+
+| Day       | Difference        |
+| --------- | ----------------- |
+| Tuesday   | 6250 - 6200 = 50  |
+| Wednesday | 6300 - 6250 = 50  |
+| Thursday  | 6280 - 6300 = -20 |
+
+
+This helps make the series stationary.
+
+========
+
+q = 1 (MA)
+
+Uses the previous forecast error while making the next prediction.
+
+=======
+
+How to Find p, d, q
+
+| Parameter | Method                                   |
+| --------- | ---------------------------------------- |
+| p         | PACF Plot                                |
+| d         | ADF Test / Differencing until stationary |
+| q         | ACF Plot                                 |
+
+=========
+
+p is the number of lag observations used in the Auto Regressive part, 
+d is the number of differencing operations applied to make the series stationary, 
+and q is the number of lagged forecast errors used in the Moving Average part. For example,
+ARIMA(1,1,1) uses one lag value, one differencing step, and one lag error term.
+
+
+=======
+
