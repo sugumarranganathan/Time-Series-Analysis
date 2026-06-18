@@ -11,6 +11,14 @@
 | (1,2,1)             | 1 | 2 | 1 | ARIMA(1,2,1) | Second-order Differencing |
 | (1,1,1)(1,1,1,12)   | 1 | 1 | 1 | SARIMA       | Seasonal ARIMA            |
 
+
+AR(1) means the model uses the previous 1 observation (lag 1) to predict the current value.
+AR(2) means the model uses the previous 2 observations (lag 1 and lag 2) to predict the current value.
+The number inside the bracket indicates the number of lagged values used in forecasting.
+
+RMA(1,1) uses one lagged observation and one lagged error term for forecasting.
+ARIMA(2,1,2) uses two lagged observations, one level of differencing to make the series stationary,
+and two lagged error terms for forecasting.
 ========
 
 | Model            | p | d | q | Meaning                                             |
