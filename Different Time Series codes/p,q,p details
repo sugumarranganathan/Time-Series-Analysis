@@ -11,6 +11,23 @@
 | (1,2,1)             | 1 | 2 | 1 | ARIMA(1,2,1) | Second-order Differencing |
 | (1,1,1)(1,1,1,12)   | 1 | 1 | 1 | SARIMA       | Seasonal ARIMA            |
 
+========
+
+| Model            | p | d | q | Meaning                                             |
+| ---------------- | - | - | - | --------------------------------------------------- |
+| **ARMA(1,1)**    | 1 | 0 | 1 | Uses 1 past value + 1 past error                    |
+| **ARIMA(2,1,2)** | 2 | 1 | 2 | Uses 2 past values + 1 differencing + 2 past errors |
+
+=====
+| ARIMA Order | Model        |
+| ----------- | ------------ |
+| (1,0,0)     | AR(1)        |
+| (2,0,0)     | AR(2)        |
+| (3,0,0)     | AR(3)        |
+| (0,0,1)     | MA(1)        |
+| (1,0,1)     | ARMA(1,1)    |
+| (1,1,1)     | ARIMA(1,1,1) |
+
 ==============
 | Symbol | Think As        |
 | ------ | --------------- |
