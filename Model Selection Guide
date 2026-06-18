@@ -1,0 +1,26 @@
+| Dataset Condition        | Recommended Model |
+| ------------------------ | ----------------- |
+| Stationary data          | AR, MA, ARMA      |
+| Non-stationary data      | ARIMA             |
+| Seasonal data            | SARIMA            |
+| Trend + Seasonality      | SARIMA            |
+| Simple baseline forecast | Moving Average    |
+
+========
+
+Typical Workflow
+
+| Step | Action                                         |
+| ---- | ---------------------------------------------- |
+| 1    | Plot the time series                           |
+| 2    | Check stationarity using ADF Test              |
+| 3    | If non-stationary, apply differencing (find d) |
+| 4    | Check ACF plot (find q)                        |
+| 5    | Check PACF plot (find p)                       |
+| 6    | Build candidate models                         |
+| 7    | Compare AIC/BIC/RMSE                           |
+| 8    | Select the best model                          |
+
+========
+
+
